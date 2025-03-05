@@ -1,6 +1,6 @@
-import cv2
-import mediapipe as mp
-import numpy as np
+import cv2 #openCV computervision tasks
+import mediapipe as mp #detection od poses
+import numpy as np #numerical calculations
 import math
 from math import atan2, degrees, radians
 import numpy.linalg as LA
@@ -13,7 +13,7 @@ mp_pose = mp.solutions.pose
 cam = cv2.VideoCapture(0)
 
 
-def calculate_angle(a, b):
+def calculate_angle(a, b): #calculate the angle between two vectors
     a = np.array(a)
     b = np.array(b)
     inner = np.inner(a, b)
